@@ -1,4 +1,4 @@
-name: 'GitHub Actions Weather Bot'
+name: '2021GitHub Actions Weather Bot'
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
       - name: 'Get Weather'
         run: bash ./weather.sh
       - name: 'Get Date'
-        run: echo "REPORT_DATE=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
+        run: echo "REPORT_DATE=$(TZ=':Asia/Changsha' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
       - name: 'Send mail'
         uses: dawidd6/action-send-mail@master
         with:
